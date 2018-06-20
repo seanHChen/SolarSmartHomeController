@@ -1,4 +1,0 @@
-"# SolarSmartHomeController" 
-
-hi
-"# SolarSmartHomeController" 
