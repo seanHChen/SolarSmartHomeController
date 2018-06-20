@@ -1,4 +1,4 @@
-// Sean C LDR + 3LED Tester Project 6/18/2018
+// Created by Sean C LDR + 3LED Tester Project 6/18/2018
 // initialize the input value integer
 int intputValue;
 
@@ -6,14 +6,14 @@ int intputValue;
 int photoResistorPin = A0;
 
 // define the pin numbers for the three LED's
-int darknessPin = 2; // the LED for dark light levels is located at pin 4
+int darkPin = 2; // the LED for dark light levels is located at pin 4
 int mediumPin = 3; // the LED for medium light levels is located at pin 3
 int brightPin = 4; // the LED for bright light levels is located at pin 2
 
 void setup() {
   // sets up the program before running
   // label all the pins as output pins
-  pinMode(darknessPin,OUTPUT); // pin 4 is output
+  pinMode(darkPin,OUTPUT); // pin 4 is output
   pinMode(mediumPin,OUTPUT); // pin 3 is output
   pinMode(brightPin, OUTPUT); // pin 2 is output
 }
@@ -23,7 +23,7 @@ void loop(){
   intputValue = analogRead(photoResistorPin); // sets inputValue as the photoresistor level. 
   if(intputValue < 40){    
     // if the input level (photoResistor level) is less than 50, the LED representing darkness will turn on        
-    digitalWrite(darknessPin, HIGH); 
+    digitalWrite(darkPin, HIGH); 
   }
   else if(intputValue >= 40 && intputValue <= 80){
     // if the input level is between 50 and 80, then the LED representing medium light levels will turn on
@@ -39,5 +39,5 @@ void loop(){
   // turns off all the pins
   digitalWrite(brightPin, LOW); 
   digitalWrite(mediumPin, LOW);
-  digitalWrite(darknessPin, LOW);
+  digitalWrite(darkPin, LOW);
 }
